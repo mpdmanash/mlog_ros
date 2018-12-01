@@ -1,0 +1,5 @@
+<launch>
+    <node pkg="vlog" type="gt" name="gt" args="/ground_truth/state $(find vlog)/results/gt4_1.txt"/>
+    <node pkg="vlog" type="localize" name="vlogbottom" args="$(find vlog)/results/vlog4d_1.txt bottom no" output="screen"/>
+    <node pkg="vlog" type="localize" name="vlogfront" args="$(find vlog)/results/vlog4f_1.txt front no"/>
+</launch>
